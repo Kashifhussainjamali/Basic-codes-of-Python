@@ -1,0 +1,66 @@
+print("******WHITE ROSE RESTURANT******")
+print('''1:Call Waiter
+2:Menu
+3:Call For Bill
+4:Feedback''')
+
+class resturant:
+ def waiter(self):
+     print("Hello Sir How Can I Help You")
+
+ def order_food(self):
+     self.rate=0
+     print("***MENU***")
+     print("1 : Biryani  200/kg")
+     print("2 : Mutton   2000/kg")
+     print("3 : Chicken  1000/kg")
+     print("4 : Kabab    600/plate")
+     print("5 : Nothing More")
+     while True:
+         order_1 = input("Pleace Select Your Food")
+         if order_1 == "1":
+             print("Yes Sir Biryani Placed Any Thing More?")
+             self.rate = self.rate + 200
+         elif order_1 == "2":
+             print("Yes Sir Mutton Plced Any Thing More")
+             self.rate = self.rate + 2000
+         elif order_1 == "3":
+             print("Yes Sir Chicken Placed Any Thing More")
+             self.rate = self.rate + 1000
+         elif order_1 == "4":
+             print("Yes Sir Kabab Placed Any Thing More")
+             self.rate = self.rate + 600
+         elif order_1 == "5":
+             print("Thank You Sir Kindly Wait For 30 Minuts")
+             break
+ def bill(self):
+     print("Your Bill is ",self.rate)
+
+ def feedback(self):
+     input("How Was Our Servis Sir Please Give Feedback")
+     print("Thank You For Your Feedback Sir")
+
+
+ def loop(self):
+   while True:
+      order=input("Enter Your Option")
+
+      if order=="1":
+        self.waiter()
+
+      elif order=="2":
+         self.order_food()
+
+      elif order=="3":
+         self.bill()
+
+      elif order=="4":
+
+          self.feedback()
+          break
+
+      else:
+          print("Wrong Option")
+
+obj=resturant()
+obj.loop()
